@@ -70,6 +70,7 @@ class _LoginFormState extends State<LoginForm> {
                   password = value!;
                 },
                 validator: validatePassword,
+                obscureText: true,
                 decoration: InputDecoration(
                     labelText: "Mot de passe",
                     hintText: "Saisissez votre mot de passe..."),
@@ -90,6 +91,8 @@ class _LoginFormState extends State<LoginForm> {
                             if (key.currentState!.validate()) {
                               //redirection vers la page d'accueil
                               key.currentState!.save();
+                              Navigator.pushNamed(context, "/tweets",
+                                  arguments: email);
                               _showDialog();
                             }
                           },

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tp_rcda32/content-body.dart';
-import 'package:flutter_tp_rcda32/footer.dart';
-import 'package:flutter_tp_rcda32/header.dart';
-import 'package:flutter_tp_rcda32/login-form.dart';
+import 'package:flutter_tp_rcda32/auth/login-page.dart';
+import 'package:flutter_tp_rcda32/tweet/content-body.dart';
+import 'package:flutter_tp_rcda32/tweet/footer.dart';
+import 'package:flutter_tp_rcda32/tweet/header.dart';
+import 'package:flutter_tp_rcda32/auth/login-form.dart';
+import 'package:flutter_tp_rcda32/tweet/tweet-page.dart';
 
 void main() {
   runApp(const TwitterApp());
@@ -17,16 +19,10 @@ class TwitterApp extends StatelessWidget {
         title: 'Twitter',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent)),
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.blueAccent.shade400,
-            title: Center(
-                child: Text('Tweety !',
-                    style: TextStyle(fontSize: 24, color: Colors.white))),
-          ),
-          body: Column(
-            children: [Header(), LoginForm(), Expanded(child: ContentBody()), Footer()],
-          ),
-        ));
+        routes: {
+          "/": (context) => LoginPage(),
+          "/tweets": (context) => TweetyPage(),
+        },
+        initialRoute: "/");
   }
 }
