@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tp_rcda32/content-body.dart';
 import 'package:flutter_tp_rcda32/footer.dart';
 import 'package:flutter_tp_rcda32/header.dart';
+import 'package:flutter_tp_rcda32/login-form.dart';
 
 void main() {
   runApp(const TwitterApp());
@@ -24,7 +25,7 @@ class TwitterApp extends StatelessWidget {
                     style: TextStyle(fontSize: 24, color: Colors.white))),
           ),
           body: Column(
-            children: [Header(), Expanded(child: ContentBody()), Footer()],
+            children: [Header(), LoginForm(), Expanded(child: ContentBody()), Footer()],
           ),
         ));
   }
