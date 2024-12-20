@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tp_rcda32/auth/login-page.dart';
-import 'package:flutter_tp_rcda32/tweet/content-body.dart';
-import 'package:flutter_tp_rcda32/tweet/footer.dart';
-import 'package:flutter_tp_rcda32/tweet/header.dart';
-import 'package:flutter_tp_rcda32/auth/login-form.dart';
 import 'package:flutter_tp_rcda32/tweet/tweet-page.dart';
 
 void main() {
